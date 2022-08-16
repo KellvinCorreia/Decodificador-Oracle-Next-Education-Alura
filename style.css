@@ -1,0 +1,181 @@
+:root {
+  font-size: 62.5%;
+}
+* {
+  --light-blue: hsla(229, 34%, 75%, 1);
+  --dark-blue-soft: hsla(208, 57%, 60%);
+  --dark-blue: hsla(216, 87%, 20%);
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+}
+body {
+  background-color: var(--light-blue);
+  font-size: 1.6rem;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+.themeSwitch {
+  background-color: black;
+  color: white;
+}
+.icons {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  font-size: 3rem;
+  margin-top: 2.4rem;
+  width: 90vw;
+}
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#mainHeader {
+  display: flex;
+  flex-direction: column;
+}
+#userText {
+  margin-top: 5.6rem;
+  margin-inline: auto;
+  background-color: transparent;
+  width: 90%;
+  padding: 2rem;
+  border: 1px solid var(--dark-blue);
+  border-radius: 2.4rem;
+  font-size: 1.6rem;
+}
+#userText::placeholder {
+  font-size: 2.5rem;
+  color: var(--dark-blue);
+  text-align: center;
+}
+#userTextLabel {
+  margin-top: 5rem;
+}
+.buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2.4rem;
+  margin-top: 1.6rem;
+}
+.encript1 {
+  background-color: var(--dark-blue);
+  color: white;
+  border-radius: 2.4rem;
+  width: 30rem;
+  height: 6.7rem;
+}
+.encript2 {
+  background-color: transparent;
+  border: 1px solid var(--dark-blue);
+  border-radius: 2.4rem;
+  width: 30rem;
+  height: 6.7rem;
+}
+.encript1:hover, .encript2:hover {
+  color: white;
+  cursor: pointer;
+  background-color: var(--dark-blue);
+}
+.result {
+  margin-top: 5rem;
+  width: 30rem;
+  text-align: center;
+  font-weight: 700;
+  background-color: white;
+  box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.61);
+  border-radius: 3.2rem;
+  padding: 2rem;
+}
+.result p {
+  font-weight: 400;
+}
+#svgSearching {
+  display: none;
+}
+#copy {
+  background-color: lightgray;
+  border: 1px solid var(--dark-blue);
+  width: 20rem;
+  height: 3rem;
+  border-radius: 2.4rem;
+  cursor: pointer;
+  grid-area: copy;
+}
+#copy:hover {
+  color: white;
+  background-color: var(--dark-blue);
+}
+#copy.greenButton {
+  color: white;
+  background-color: green;
+}
+footer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  padding: 1rem;
+  margin-inline: auto;
+}
+footer a {
+  text-decoration: none;
+  margin-bottom: -5px;
+}
+
+
+@media (min-width: 768px) {
+  .result {
+    width: min(90%, 100rem);
+  }
+  .buttons {
+    flex-direction: row;
+  }
+}
+@media (min-width: 1440px) {
+  main {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template: 
+    "texto texto cripto"
+    "button button cripto";
+  }
+  #mainHeader {
+    grid-area: texto;
+    margin-left: 25rem;
+  }
+  .result {
+    height: 80vh;
+    width: 40vw;
+    grid-area: cripto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .buttons {
+    grid-area: button;
+    margin-left: 25rem;
+  }
+  #svgSearching {
+    display: flex;
+    margin-inline: auto;
+  }
+}
+@media (min-width: 2000px) {
+  body, button {
+    font-size: 2rem;
+  }
+  main {
+    margin-left: 10%;
+  }
+  #userText::placeholder {
+    font-size: 3rem;
+  }
+}
